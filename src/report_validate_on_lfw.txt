@@ -1,0 +1,24 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'validate_on_lfw.py'
+ outputting to 'validate_on_lfw.py'
+--------------------------------------------------------------------------------
+
+48:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+56:38: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+57:33: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+58:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+59:34: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+60:38: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+76:25: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+79:12: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+--------------------------------------------------------------------------------
+

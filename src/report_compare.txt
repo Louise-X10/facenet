@@ -1,0 +1,23 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'compare.py'
+ outputting to 'compare.py'
+--------------------------------------------------------------------------------
+
+44:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+50:33: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+51:25: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+52:38: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+87:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+88:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+88:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,24 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'freeze_graph.py'
+ outputting to 'freeze_graph.py'
+--------------------------------------------------------------------------------
+
+40:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+49:20: INFO: Renamed 'tf.train.import_meta_graph' to 'tf.compat.v1.train.import_meta_graph'
+50:12: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+50:41: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+51:12: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+51:41: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+52:26: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+61:13: INFO: Renamed 'tf.gfile.GFile' to 'tf.io.gfile.GFile'
+--------------------------------------------------------------------------------
+

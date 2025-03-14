@@ -1,0 +1,58 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: train_softmax.py
+--------------------------------------------------------------------------------
+train_softmax.py:462:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'train_softmax.py'
+ outputting to 'train_softmax.py'
+--------------------------------------------------------------------------------
+
+98:8: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+110:22: INFO: Renamed 'tf.train.range_input_producer' to 'tf.compat.v1.train.range_input_producer'
+115:36: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+116:33: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+117:34: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+118:34: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+119:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+120:30: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+148:36: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+156:8: INFO: Renamed 'tf.add_to_collection' to 'tf.compat.v1.add_to_collection'
+156:29: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+160:8: INFO: Renamed 'tf.add_to_collection' to 'tf.compat.v1.add_to_collection'
+160:29: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+162:24: INFO: tf.train.exponential_decay requires manual check. To use learning rate decay schedules with TensorFlow 2.0, switch to the schedules in `tf.keras.optimizers.schedules`.
+
+162:24: INFO: Renamed 'tf.train.exponential_decay' to 'tf.compat.v1.train.exponential_decay'
+164:8: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+170:8: INFO: Renamed 'tf.add_to_collection' to 'tf.compat.v1.add_to_collection'
+176:32: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+176:50: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+181:54: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+184:16: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+184:31: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+187:21: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+187:21: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+190:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+191:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+191:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+192:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+193:17: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+194:25: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+194:25: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+196:8: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+350:14: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+446:14: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+462:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+473:14: INFO: Renamed 'tf.Summary' to 'tf.compat.v1.Summary'
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,20 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'calculate_filtering_metrics.py'
+ outputting to 'calculate_filtering_metrics.py'
+--------------------------------------------------------------------------------
+
+57:24: INFO: Renamed 'tf.GraphDef' to 'tf.compat.v1.GraphDef'
+62:21: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+64:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+65:12: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+--------------------------------------------------------------------------------
+
