@@ -23,8 +23,8 @@ def face_distance(face_encodings, face_to_compare):
 
 def load_model(model_dir, meta_file, ckpt_file):
     model_dir_exp = os.path.expanduser(model_dir)
-    saver = tf.train.import_meta_graph(os.path.join(model_dir_exp, meta_file))
-    saver.restore(tf.get_default_session(), os.path.join(model_dir_exp, ckpt_file))
+    saver = tf.compat.v1.train.import_meta_graph(os.path.join(model_dir_exp, meta_file))
+    saver.restore(tf.compat.v1.get_default_session(), os.path.join(model_dir_exp, ckpt_file))
 
 def _chinese_whispers(encoding_list, threshold=0.55, iterations=20):
     """ Chinese Whispers Algorithm
@@ -211,7 +211,7 @@ def main(args):
         makedirs(args.output)
 
     with tf.Graph().as_default():
-        with tf.Session() as sess:
+        with tf.compat.v1.Session() as sess:
             image_paths = get_onedir(args.input)
             #image_list, label_list = facenet.get_image_paths_and_labels(train_set)
 
@@ -222,9 +222,9 @@ def main(args):
             load_model(args.model_dir, meta_file, ckpt_file)
             
             # Get input and output tensors
-            images_placeholder = tf.get_default_graph().get_tensor_by_name("input:0")
-            embeddings = tf.get_default_graph().get_tensor_by_name("embeddings:0")
-            phase_train_placeholder = tf.get_default_graph().get_tensor_by_name("phase_train:0")
+            images_placeholder = tf.compat.v1.get_default_graph().get_tensor_by_name("input:0")
+            embeddings = tf.compat.v1.get_default_graph().get_tensor_by_name("embeddings:0")
+            phase_train_placeholder = tf.compat.v1.get_default_graph().get_tensor_by_name("phase_train:0")
             
             image_size = images_placeholder.get_shape()[1]
             print("image_size:",image_size)

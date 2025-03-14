@@ -1,0 +1,184 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 9 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: src/generative/train_vae.py
+--------------------------------------------------------------------------------
+src/generative/train_vae.py:213:20: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'src/generative'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'src/generative/__init__.py'
+ outputting to 'src/generative/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/calculate_attribute_vectors.py'
+ outputting to 'src/generative/calculate_attribute_vectors.py'
+--------------------------------------------------------------------------------
+
+56:8: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+71:22: INFO: Renamed 'tf.train.slice_input_producer' to 'tf.compat.v1.train.slice_input_producer'
+77:28: INFO: Renamed 'tf.read_file' to 'tf.io.read_file'
+79:20: INFO: Renamed 'tf.image.resize_image_with_crop_or_pad' to 'tf.image.resize_with_crop_or_pad'
+87:35: INFO: Renamed 'tf.train.batch_join' to 'tf.compat.v1.train.batch_join'
+97:29: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+102:18: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+107:16: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+107:31: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+111:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+112:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+112:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+113:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+114:17: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+116:8: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/modify_attribute.py'
+ outputting to 'src/generative/modify_attribute.py'
+--------------------------------------------------------------------------------
+
+52:8: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+54:17: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+60:29: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+65:18: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+76:16: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+76:31: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+80:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+81:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+81:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+82:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+83:17: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+85:8: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/train_vae.py'
+ outputting to 'src/generative/train_vae.py'
+--------------------------------------------------------------------------------
+
+66:8: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+73:22: INFO: Renamed 'tf.train.string_input_producer' to 'tf.compat.v1.train.string_input_producer'
+78:28: INFO: Renamed 'tf.read_file' to 'tf.io.read_file'
+80:20: INFO: Renamed 'tf.image.resize_image_with_crop_or_pad' to 'tf.image.resize_with_crop_or_pad'
+86:17: INFO: Renamed 'tf.train.batch_join' to 'tf.compat.v1.train.batch_join'
+95:29: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+100:18: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+112:28: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+117:40: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+146:24: INFO: tf.train.exponential_decay requires manual check. To use learning rate decay schedules with TensorFlow 2.0, switch to the schedules in `tf.keras.optimizers.schedules`.
+
+146:24: INFO: Renamed 'tf.train.exponential_decay' to 'tf.compat.v1.train.exponential_decay'
+150:14: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+159:16: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+159:31: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+161:24: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+165:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+166:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+166:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+167:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+168:17: INFO: Renamed 'tf.local_variables_initializer' to 'tf.compat.v1.local_variables_initializer'
+170:8: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+213:20: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+221:15: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+228:15: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+235:91: INFO: Renamed keyword argument for tf.reduce_sum from reduction_indices to axis
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/models/__init__.py'
+ outputting to 'src/generative/models/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/models/dfc_vae.py'
+ outputting to 'src/generative/models/dfc_vae.py'
+--------------------------------------------------------------------------------
+
+45:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+49:56: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+49:56: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+50:56: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+65:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+69:56: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+69:56: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+70:56: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+76:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+79:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+82:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+85:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/models/dfc_vae_large.py'
+ outputting to 'src/generative/models/dfc_vae_large.py'
+--------------------------------------------------------------------------------
+
+46:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+50:56: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+50:56: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+51:56: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+67:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+71:56: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+71:56: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+72:56: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+78:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+81:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+84:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+87:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+90:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/models/dfc_vae_resnet.py'
+ outputting to 'src/generative/models/dfc_vae_resnet.py'
+--------------------------------------------------------------------------------
+
+45:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+49:56: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+49:56: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+50:56: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+75:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+79:56: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+79:56: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+80:56: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+86:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+90:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+94:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+98:26: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/generative/models/vae_base.py'
+ outputting to 'src/generative/models/vae_base.py'
+--------------------------------------------------------------------------------
+
+45:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+--------------------------------------------------------------------------------
+

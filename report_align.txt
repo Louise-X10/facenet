@@ -1,0 +1,64 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 3 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: src/align/detect_face.py
+--------------------------------------------------------------------------------
+src/align/detect_face.py:91:30: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/align/detect_face.py:125:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'src/align'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'src/align/__init__.py'
+ outputting to 'src/align/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/align/align_dataset_mtcnn.py'
+ outputting to 'src/align/align_dataset_mtcnn.py'
+--------------------------------------------------------------------------------
+
+52:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+53:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+53:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/align/detect_face.py'
+ outputting to 'src/align/detect_face.py'
+--------------------------------------------------------------------------------
+
+88:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+91:30: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+91:30: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+125:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+125:15: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+152:32: INFO: Added keywords to args of function 'tf.nn.conv2d'
+152:32: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+153:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+168:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+177:15: INFO: Added keywords to args of function 'tf.nn.max_pool'
+177:15: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+177:15: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+185:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+197:17: INFO: Renamed 'tf.nn.relu_layer' to 'tf.compat.v1.nn.relu_layer'
+197:47: INFO: Renamed 'tf.nn.xw_plus_b' to 'tf.compat.v1.nn.xw_plus_b'
+213:18: INFO: Renamed 'tf.div' to 'tf.compat.v1.div'
+280:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+281:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+284:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+285:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+288:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+289:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+--------------------------------------------------------------------------------
+

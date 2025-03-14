@@ -1,0 +1,115 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 5 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'src/models'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'src/models/__init__.py'
+ outputting to 'src/models/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/models/dummy.py'
+ outputting to 'src/models/dummy.py'
+--------------------------------------------------------------------------------
+
+43:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+47:44: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+47:44: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+48:44: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/models/inception_resnet_v1.py'
+ outputting to 'src/models/inception_resnet_v1.py'
+--------------------------------------------------------------------------------
+
+32:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+33:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+35:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+38:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+53:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+54:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+56:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+74:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+75:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+77:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+92:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+95:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+102:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+109:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+113:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+117:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+123:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+140:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+145:44: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+172:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+211:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+220:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+231:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/models/inception_resnet_v2.py'
+ outputting to 'src/models/inception_resnet_v2.py'
+--------------------------------------------------------------------------------
+
+32:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+33:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+35:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+38:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+53:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+54:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+56:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+74:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+75:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+77:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+101:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+105:44: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+132:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+167:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+168:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+170:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+174:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+180:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+192:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+193:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+196:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+203:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+211:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+212:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+216:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+220:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+226:25: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+240:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/models/squeezenet.py'
+ outputting to 'src/models/squeezenet.py'
+--------------------------------------------------------------------------------
+
+14:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+25:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+39:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+42:44: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+43:44: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+46:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,121 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 8 files
+Detected 5 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: contributed/batch_represent.py
+--------------------------------------------------------------------------------
+contributed/batch_represent.py:131:3: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+contributed/batch_represent.py:132:3: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: contributed/export_embeddings.py
+--------------------------------------------------------------------------------
+contributed/export_embeddings.py:125:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+contributed/export_embeddings.py:126:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+contributed/export_embeddings.py:128:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'contributed'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'contributed/__init__.py'
+ outputting to 'contributed/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/real_time_face_recognition.py'
+ outputting to 'contributed/real_time_face_recognition.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/batch_represent.py'
+ outputting to 'contributed/batch_represent.py'
+--------------------------------------------------------------------------------
+
+85:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+104:24: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+105:16: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+106:29: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+131:3: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+132:3: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/cluster.py'
+ outputting to 'contributed/cluster.py'
+--------------------------------------------------------------------------------
+
+45:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+151:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+152:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+152:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/clustering.py'
+ outputting to 'contributed/clustering.py'
+--------------------------------------------------------------------------------
+
+26:12: INFO: Renamed 'tf.train.import_meta_graph' to 'tf.compat.v1.train.import_meta_graph'
+27:18: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+214:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+225:33: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+226:25: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+227:38: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/export_embeddings.py'
+ outputting to 'contributed/export_embeddings.py'
+--------------------------------------------------------------------------------
+
+80:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+86:33: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+87:25: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+88:38: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+125:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+126:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+128:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+139:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+140:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+140:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/face.py'
+ outputting to 'contributed/face.py'
+--------------------------------------------------------------------------------
+
+100:20: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+106:29: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+107:21: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+108:34: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+130:26: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+131:19: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+131:37: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'contributed/predict.py'
+ outputting to 'contributed/predict.py'
+--------------------------------------------------------------------------------
+
+50:12: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+55:37: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+56:29: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+57:42: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+85:22: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+86:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+86:33: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+--------------------------------------------------------------------------------
+

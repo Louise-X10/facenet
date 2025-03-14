@@ -82,7 +82,7 @@ def main(args):
 
 	with tf.Graph().as_default():
 
-		with tf.Session() as sess:
+		with tf.compat.v1.Session() as sess:
 
 			# create output directory if it doesn't exist
 			output_dir = os.path.expanduser(args.output_dir)
@@ -101,9 +101,9 @@ def main(args):
 			paths = data['filenames']
 
 			# Get input and output tensors
-			images_placeholder = tf.get_default_graph().get_tensor_by_name("input:0")
-			embeddings = tf.get_default_graph().get_tensor_by_name("embeddings:0")
-			phase_train_placeholder = tf.get_default_graph().get_tensor_by_name("phase_train:0")
+			images_placeholder = tf.compat.v1.get_default_graph().get_tensor_by_name("input:0")
+			embeddings = tf.compat.v1.get_default_graph().get_tensor_by_name("embeddings:0")
+			phase_train_placeholder = tf.compat.v1.get_default_graph().get_tensor_by_name("phase_train:0")
 
 			image_size = images_placeholder.get_shape()[1]
 			embedding_size = embeddings.get_shape()[1]

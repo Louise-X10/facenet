@@ -42,7 +42,7 @@ def main(args):
 
     with tf.Graph().as_default():
 
-        with tf.Session() as sess:
+        with tf.compat.v1.Session() as sess:
             facenet.load_model(args.model)
 
             image_list = load_images_from_folder(args.data_dir)
@@ -148,8 +148,8 @@ def align_data(image_list, image_size, margin, pnet, rnet, onet):
 
 def create_network_face_detection(gpu_memory_fraction):
     with tf.Graph().as_default():
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_memory_fraction)
-        sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
+        gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=gpu_memory_fraction)
+        sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
         with sess.as_default():
             pnet, rnet, onet = align.detect_face.create_mtcnn(sess, None)
     return pnet, rnet, onet
